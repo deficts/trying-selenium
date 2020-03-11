@@ -2,10 +2,10 @@ FROM gitpod/workspace-full
 
 USER root
 
-RUN sudo apt-get update && \
-    sudo apt-get install libnss3-dev && \
+RUN sudo apt-get -y update && \
+    sudo apt-get -y install libnss3-dev && \
     sudo apt-get update && \
-    sudo apt-get install -y unzip xvfb libxi6 libgconf-2-4 && \
+    sudo apt-get -y install -y unzip xvfb libxi6 libgconf-2-4 && \
     sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add && \
     sudo echo "deb [arch=amd64]  http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list && \
     sudo apt-get -y update && \
